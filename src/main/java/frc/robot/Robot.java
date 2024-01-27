@@ -97,7 +97,7 @@ xboxController = new XboxController(4);
   motor1.set(speed1);
 motor2.set(speed1 * -1);
 
-
+//robot up
 if (xboxController.getAButton()) {
   speed1 = 0.5;
 }
@@ -105,7 +105,9 @@ if (xboxController.getAButton()) {
    speed1 = 0.8;
  } else if (xboxController.getYButton()){
   speed1 = 0.25;
- } else if (xboxController.getXButton()){
+ } 
+ //robot down
+ else if (xboxController.getXButton()){
   speed1 = -0.25;
  }
  else {
