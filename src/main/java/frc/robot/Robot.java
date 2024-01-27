@@ -6,7 +6,7 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import edu. wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj.XboxController;
 import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkLowLevel.MotorType;
@@ -35,7 +35,7 @@ public class Robot extends TimedRobot {
 
    public Robot(){
     
-motor1 = new CANSparkMax(57, MotorType.kBrushless);
+motor1 = new CANSparkMax(7, MotorType.kBrushless);
 motor2 = new CANSparkMax(2,MotorType.kBrushless);
 xboxController = new XboxController(4);
    }
@@ -95,7 +95,7 @@ xboxController = new XboxController(4);
   @Override
   public void teleopPeriodic() {
   motor1.set(speed1);
-motor2.set(speed1);
+motor2.set(speed1 * -1);
 
 
 if (xboxController.getAButton()) {
